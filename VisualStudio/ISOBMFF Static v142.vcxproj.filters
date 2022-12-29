@@ -147,6 +147,18 @@
     <ClInclude Include="..\ISOBMFF\include\ISOBMFF\BinaryDataStream.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\ISOBMFF\include\ISOBMFF\SIDX.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ISOBMFF\include\ISOBMFF\MFHD.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ISOBMFF\include\ISOBMFF\TFHD.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ISOBMFF\include\ISOBMFF\TREX.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\ISOBMFF\source\BinaryStream.cpp">
@@ -294,6 +306,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\ISOBMFF\source\BinaryFileStream.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ISOBMFF\source\SIDX.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ISOBMFF\source\SIDX-ReferenceObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ISOBMFF\source\MFHD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ISOBMFF\source\TFHD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ISOBMFF\source\TREX.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -85,7 +85,7 @@ int main( int argc, const char * argv[] )
             return EXIT_FAILURE;
         }
         
-        std::cout << *( parser.GetFile() ) << std::endl << std::endl;
+        std::cout << path << *( parser.GetFile() ) << std::endl << std::endl;
     }
 
     #if defined( _WIN32 ) && defined( _DEBUG )

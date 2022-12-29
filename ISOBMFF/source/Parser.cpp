@@ -58,6 +58,10 @@
 #include <ISOBMFF/STSD.hpp>
 #include <ISOBMFF/FRMA.hpp>
 #include <ISOBMFF/SCHM.hpp>
+#include <ISOBMFF/SIDX.hpp>
+#include <ISOBMFF/MFHD.hpp>
+#include <ISOBMFF/TFHD.hpp>
+#include <ISOBMFF/TREX.hpp>
 #include <map>
 #include <stdexcept>
 #include <cstring>
@@ -191,6 +195,7 @@ namespace ISOBMFF
         if
         (
                memcmp( n, "ftyp", 4 ) != 0
+            && memcmp( n, "styp", 4 ) != 0  // Segment Type Box
             && memcmp( n, "sinf", 4 ) != 0
             && memcmp( n, "wide", 4 ) != 0
             && memcmp( n, "free", 4 ) != 0
@@ -367,5 +372,10 @@ namespace ISOBMFF
         this->RegisterBox( "stsd", [ = ]() -> std::shared_ptr< Box > { return std::make_shared< STSD >(); } );
         this->RegisterBox( "frma", [ = ]() -> std::shared_ptr< Box > { return std::make_shared< FRMA >(); } );
         this->RegisterBox( "schm", [ = ]() -> std::shared_ptr< Box > { return std::make_shared< SCHM >(); } );
+
+        this->RegisterBox( "sidx", [ = ]() -> std::shared_ptr< Box > { return std::make_shared< SIDX >(); } );
+        this->RegisterBox( "mfhd", [=]() -> std::shared_ptr< Box > { return std::make_shared< MFHD >(); });
+        this->RegisterBox("tfhd", [=]() -> std::shared_ptr< Box > { return std::make_shared< TFHD >(); });
+        this->RegisterBox("trex", [=]() -> std::shared_ptr< Box > { return std::make_shared< TREX >(); });
     }
 }

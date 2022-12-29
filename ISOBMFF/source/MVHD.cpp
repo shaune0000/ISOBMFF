@@ -139,7 +139,7 @@ namespace ISOBMFF
         props.push_back( { "Rate",              std::to_string( this->GetRate() ) } );
         props.push_back( { "Volume",            std::to_string( this->GetVolume() ) } );
         props.push_back( { "Matrix",            this->GetMatrix().ToString() } );
-        props.push_back( { "Next track ID",     std::to_string( this->GetNextTrackID() ) } );
+        props.push_back( { "Next track ID (max track id +1)",     std::to_string( this->GetNextTrackID() ) } );
         
         return props;
     }
